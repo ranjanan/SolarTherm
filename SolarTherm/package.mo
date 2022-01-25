@@ -1,9 +1,9 @@
 within ;
 package SolarTherm
   extends SolarTherm.Icons.SolarThermPackage;
-  import SI = Modelica.SIunits;
+  import SI = Modelica.Units.SI;
   import nSI = Modelica.SIunits.Conversions.NonSIunits;
-  import Modelica.SIunits.Conversions.*;
+  import Modelica.Units.Conversions.*;
   import Modelica.Math.sin;
   import Modelica.Math.cos;
   import Modelica.Math.asin;
@@ -31,7 +31,7 @@ package SolarTherm
   version="0.2",
   versionBuild=1,
   versionDate="2016-04-26",
-    uses(Modelica(version="3.2.2")),
+    uses(Modelica(version="4.0.0")),
     Documentation(info="<html>
 <h4>Welcome to SolarTherm library!!</h4>
 <p>SolarTherm was created under the Astralian Solar Thermal Research Iniciative (ASTRI) program with the aim to provide solar thermal community with an easy tool to simulate and optimise Concentrating Solar Thermal (CST) power plants. The focus of this tool is the annual performance and the economic assessment of novel designs of solar thermal plants.</p>

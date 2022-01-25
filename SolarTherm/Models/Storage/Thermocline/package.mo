@@ -2,9 +2,9 @@ within SolarTherm.Models.Storage;
 
 package Thermocline
 
-import SI = Modelica.SIunits;
+import SI = Modelica.Units.SI;
 import CN = Modelica.Constants;
-import CV = Modelica.SIunits.Conversions;
+import CV = Modelica.Units.SI.Conversions;
 import Tables = Modelica.Blocks.Tables;
 
 function Particle_Masses "Input outer diameter, number of filler CVs, density, outputs array of particle CV masses"

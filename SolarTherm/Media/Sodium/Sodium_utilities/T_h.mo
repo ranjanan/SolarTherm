@@ -1,8 +1,8 @@
 within SolarTherm.Media.Sodium.Sodium_utilities;
 function T_h "Temperature of liquid sodium as a function of specific enthalpy"
 	extends Modelica.Icons.Function;
-	input Modelica.SIunits.SpecificEnthalpy h "Specific enthalpy";
-	output Modelica.SIunits.Temperature T "Temperature";
+	input Modelica.Units.SI.SpecificEnthalpy h "Specific enthalpy";
+	output Modelica.Units.SI.Temperature T "Temperature";
 protected
 	constant Real[8] p={ -0.009242628114334224, -0.2256606342363793, 0.6441022075255126, 2.609381245065044, -12.17897142894775, -21.99755753201832, 498.300362679127, 1204.309372258783};
 	constant Real p1= p[1];

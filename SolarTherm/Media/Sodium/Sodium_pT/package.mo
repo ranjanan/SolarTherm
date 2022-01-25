@@ -78,7 +78,8 @@ package Sodium_pT "liquid sodium model, explicit in p and T"
 	h = h_T(T);
 	u = h - p / d;
 	MM = 0.02298977;
-	R = 8.3144 / MM;
+	//R = 8.3144 / MM;
+	R_s = Modelica.Constants.R/MM;
 	//T = T_h(h);
 	//h = state.h;
 

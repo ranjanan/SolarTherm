@@ -4,12 +4,12 @@ model Part2_MgO_6h_10h_8h
   function sigmoid_temperature
     /*Source: https://stackoverflow.com/questions/43213069/fit-bipolar-sigmoid-python*/
     input Integer N_f "Tank discretisation";
-    input Modelica.SIunits.Temperature T_max "Max temperature in the tank";
-    input Modelica.SIunits.Temperature T_min "Min temperature in the tank";
+    input Modelica.Units.SI.Temperature T_max "Max temperature in the tank";
+    input Modelica.Units.SI.Temperature T_min "Min temperature in the tank";
     input Real X_offset "The smaller the offset, the more sigmoid moving to the right";
     input Real slope "The smaller the offset, the more sigmoid moving to the right";
     input Real delta_T "Temperature difference between filler and fluid";
-    output Modelica.SIunits.Temperature[N_f] T_tank;
+    output Modelica.Units.SI.Temperature[N_f] T_tank;
   algorithm
     for i in 1:N_f loop
       T_tank[i] := (T_max - T_min) / (1 + Modelica.Math.exp(-1 * slope * (i - X_offset))) + T_min - delta_T;
@@ -35,13 +35,13 @@ model Part2_MgO_6h_10h_8h
   parameter String pfunc = "fit" "Name of the Python function";
   
   //***********************Generate both fluid and filler surface temperature at the initial condition
-  parameter Modelica.SIunits.Temperature[N_f] T_fluid_init = sigmoid_temperature(N_f, T_max_sampling, T_min_sampling, X_offset, slope, 0);
-  parameter Modelica.SIunits.Temperature[N_f] T_filler_init = sigmoid_temperature(N_f, T_max_sampling, T_min_sampling, X_offset, slope, delta_T);
+  parameter Modelica.Units.SI.Temperature[N_f] T_fluid_init = sigmoid_temperature(N_f, T_max_sampling, T_min_sampling, X_offset, slope, 0);
+  parameter Modelica.Units.SI.Temperature[N_f] T_filler_init = sigmoid_temperature(N_f, T_max_sampling, T_min_sampling, X_offset, slope, delta_T);
   
   //********************** Import important stuffs
-  import SI = Modelica.SIunits;
+  import SI = Modelica.Units.SI;
   import CN = Modelica.Constants;
-  import CV = Modelica.SIunits.Conversions;
+  import CV = Modelica.Units.Conversions;
   extends Modelica.Icons.Example;
   replaceable package Medium = SolarTherm.Media.Sodium.Sodium_pT "Medium props for molten salt";
   replaceable package Fluid_Package = SolarTherm.Materials.Sodium "Material model for Sodium Chloride PCM";

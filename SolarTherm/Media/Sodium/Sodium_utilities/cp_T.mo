@@ -1,8 +1,8 @@
 within SolarTherm.Media.Sodium.Sodium_utilities;
 function cp_T "Specific heat capacity of liquid sodium at constant pressue as a function of temperature"
 	extends Modelica.Icons.Function;
-	input Modelica.SIunits.Temperature T "Temperature";
-	output Modelica.SIunits.SpecificHeatCapacity cp "Specific heat capacity";
+	input Modelica.Units.SI.Temperature T "Temperature";
+	output Modelica.Units.SI.SpecificHeatCapacity cp "Specific heat capacity";
 	
 	protected
 	Real T_data[33] = {

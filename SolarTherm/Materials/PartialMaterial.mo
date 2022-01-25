@@ -1,6 +1,6 @@
 within SolarTherm.Materials;
 partial package PartialMaterial
-  import SI = Modelica.SIunits;
+  import SI = Modelica.Units.SI;
   import CN = Modelica.Constants;
   package Tables = Modelica.Blocks.Tables;
   import SolarTherm.Utilities.Interpolation.Interpolate1D;

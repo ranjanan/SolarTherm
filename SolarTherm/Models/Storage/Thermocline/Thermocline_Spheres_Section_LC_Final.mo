@@ -2,7 +2,7 @@ within SolarTherm.Models.Storage.Thermocline;
 
 model Thermocline_Spheres_Section_LC_Final
   //Lumped Capacitance
-  import SI = Modelica.SIunits;
+  import SI = Modelica.Units.SI;
   import CN = Modelica.Constants;
   import CV = Modelica.SIunits.Conversions;
   import Tables = Modelica.Blocks.Tables;
