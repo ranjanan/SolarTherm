@@ -9,7 +9,7 @@ partial package PartialMaterial
   constant SI.Temperature T_melt = 0.0 "Melting point (K)";
   constant Real cost = 0.0 "USD/kg";
   
-  replaceable partial function h_Tf
+  replaceable function h_Tf
     "Return specific enthalpy as a function of temperature and liquid mass fraction f"
     extends Modelica.Icons.Function;
     input SI.Temperature T "Absolute temperature (K)";
@@ -17,7 +17,7 @@ partial package PartialMaterial
     output SI.SpecificEnthalpy h "Specific Enthalpy (J/kg)";
   end h_Tf;
   
-  replaceable partial function rho_Tf
+  replaceable function rho_Tf
     "Return specific enthalpy as a function of temperature and liquid mass fraction f"
     extends Modelica.Icons.Function;
     input SI.Temperature T "Absolute temperature (K)";
@@ -25,8 +25,8 @@ partial package PartialMaterial
     output SI.Density rho "Specific Enthalpy (J/kg)";
   end rho_Tf;
   
-  replaceable partial model State "A model which calculates state and properties"
-    	SI.SpecificEnthalpy h "Specific Enthalpy wrt 298.15K (J/kg)";
+  replaceable model State "A model which calculates state and properties"
+    SI.SpecificEnthalpy h "Specific Enthalpy wrt 298.15K (J/kg)";
 	SI.Temperature T "Temperature (K)";
 	Real f "Liquid Mass Fraction";
 	SI.Density rho "Density (kg/m3)";

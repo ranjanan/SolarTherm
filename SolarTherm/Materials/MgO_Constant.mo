@@ -13,6 +13,8 @@ package MgO_Constant
 	Real f "Liquid Mass Fraction";
 	SI.Density rho "Density (kg/m3)";
 	SI.ThermalConductivity k "Thermal conductivity (W/mK)";
+	//SI.SpecificHeatCapacity cp "Specific heat capacity (J/kgK)";
+
 	
   equation
     f = 0.0;
