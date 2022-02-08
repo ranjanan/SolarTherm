@@ -15,7 +15,7 @@ package Sodium
     SI.DynamicViscosity mu;
     SI.SpecificHeatCapacity cp;
     SI.ThermalConductivity k;
-    //Real f;
+    Real f;
   equation
     k = SolarTherm.Media.Sodium.Sodium_utilities.lamda_T(T);
     cp = SolarTherm.Media.Sodium.Sodium_utilities.cp_T(T);
@@ -24,6 +24,7 @@ package Sodium
     rho = SolarTherm.Media.Sodium.Sodium_utilities.rho_T(T);
     //rho = -0.23465*T + 1014.5;
     h = SolarTherm.Media.Sodium.Sodium_utilities.h_T(T);
+    f = 0.0;
   end State;
 
   redeclare function h_Tf

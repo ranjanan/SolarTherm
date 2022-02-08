@@ -13,7 +13,7 @@ package MgO_Constant
 	Real f "Liquid Mass Fraction";
 	SI.Density rho "Density (kg/m3)";
 	SI.ThermalConductivity k "Thermal conductivity (W/mK)";
-	//SI.SpecificHeatCapacity cp "Specific heat capacity (J/kgK)";
+	SI.SpecificHeatCapacity cp "Specific heat capacity (J/kgK)";
 
 	
   equation
@@ -21,6 +21,7 @@ package MgO_Constant
     h = h_Tf(T,0);
     rho = rho_Tf(T,0);
     k = k_Tf(T,0);
+    cp = 0.0;
   end State;
 
   redeclare function h_Tf "find specific enthalpy from Temperature"
